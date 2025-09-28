@@ -30,6 +30,152 @@ app.post('/api/contact', async (c) => {
   }
 })
 
+// API endpoint for syllabus PDF download
+app.get('/api/syllabus-pdf', async (c) => {
+  try {
+    // Create a proper PDF with jsPDF-like structure
+    // This is a minimal valid PDF that should work across browsers
+    const pdfContent = `%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+  /Font <<
+    /F1 4 0 R
+  >>
+>>
+/MediaBox [0 0 612 792]
+/Contents 5 0 R
+>>
+endobj
+
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+5 0 obj
+<<
+/Length 1200
+>>
+stream
+BT
+/F1 20 Tf
+50 700 Td
+(Elite Campus Training - Comprehensive Syllabus) Tj
+0 -40 Td
+/F1 16 Tf
+(Get Placed in 90 Days - From Mock to Offer) Tj
+0 -60 Td
+/F1 14 Tf
+(QUANTITATIVE APTITUDE:) Tj
+0 -25 Td
+/F1 12 Tf
+(• Arithmetic & Number Systems) Tj
+0 -20 Td
+(• Profit & Loss, Discounts) Tj
+0 -20 Td
+(• Time, Speed & Work Problems) Tj
+0 -20 Td
+(• Probability & Combinations \\(P&C\\)) Tj
+0 -20 Td
+(• Ratios, Averages & Mixtures) Tj
+0 -40 Td
+/F1 14 Tf
+(LOGICAL REASONING:) Tj
+0 -25 Td
+/F1 12 Tf
+(• Puzzles & Seating Arrangements) Tj
+0 -20 Td
+(• Blood Relations & Coding-Decoding) Tj
+0 -20 Td
+(• Syllogisms & Series) Tj
+0 -20 Td
+(• Logical Deductions & Arguments) Tj
+0 -40 Td
+/F1 14 Tf
+(DATA INTERPRETATION:) Tj
+0 -25 Td
+/F1 12 Tf
+(• Bar, Line & Pie Charts) Tj
+0 -20 Td
+(• Tables & Data Sufficiency) Tj
+0 -20 Td
+(• Statistical Analysis) Tj
+0 -40 Td
+/F1 14 Tf
+(SOFT SKILLS:) Tj
+0 -25 Td
+/F1 12 Tf
+(• Communication & Confidence Building) Tj
+0 -20 Td
+(• Interview Etiquette & Professional Presentation) Tj
+0 -40 Td
+/F1 14 Tf
+(CONTACT: Harish Kumar - +91 8438554420) Tj
+0 -20 Td
+/F1 12 Tf
+(Email: harishpro24@gmail.com) Tj
+ET
+endstream
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000079 00000 n 
+0000000173 00000 n 
+0000000301 00000 n 
+0000000380 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+1630
+%%EOF`
+
+    // Convert to Uint8Array for proper PDF handling
+    const encoder = new TextEncoder()
+    const pdfBytes = encoder.encode(pdfContent)
+    
+    return new Response(pdfBytes, {
+      headers: {
+        'Content-Type': 'application/pdf',
+        'Content-Disposition': 'attachment; filename="Elite-Campus-Training-Syllabus.pdf"',
+        'Content-Length': pdfBytes.length.toString()
+      }
+    })
+  } catch (error) {
+    console.error('PDF generation error:', error)
+    return c.json({ 
+      success: false, 
+      message: 'PDF generation failed' 
+    }, 500)
+  }
+})
+
 // Main landing page
 app.get('/', (c) => {
   return c.html(`

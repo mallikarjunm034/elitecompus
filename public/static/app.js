@@ -288,19 +288,203 @@ function toggleFAQ(index) {
 
 // Download syllabus function
 function downloadSyllabus() {
-    // Create a sample PDF download link
-    const link = document.createElement('a');
-    link.href = 'data:application/pdf;base64,JVBERi0xLjQKMSAwIG9iagp7Cjw8IC9UeXBlIC9DYXRhbG9nIC9QYWdlcyAyIDAgUiA+Pgo+CmVuZG9iagoyIDAgb2JqCns8PCANVHlwZSAvUGFnZXMgL0tpZHMgWzMgMCBSXSAvQ291bnQgMSA+Pgo+CmVuZG9iagozIDAgb2JqCns8PCANVHlwZSAvUGFnZSAvUGFyZW50IDIgMCBSIC9SZXNvdXJjZXMgeyAvRm9udCB7IC9GMSA0IDAgUiB9IH0gL01lZGlhQm94IFswIDAgNTk1IDg0Ml0gL0NvbnRlbnRzIDUgMCBSID4+Cj5lbmRvYmoKNCAwIG9iago+PAovVHlwZSAvRm9udAovU3VidHlwZSAvVHlwZTEKL0Jhc2VGb250IC9IZWx2ZXRpY2EKPj5ZCjUgMCBvYmoKPDwKL0xlbmd0aCAzMwg+PgpzdHJlYW0KQlQKL0YxIDEyIFRmCjMwMCA1MDAgVGQKKEVsaXRlIENhbXB1cyBUcmFpbmluZyBTeWxsYWJ1cykgVGoKRVQKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNgowd00wMDAwNTYgNjU1MzUgZg0KMDAwMDAwMDE5IDAwMDAwIG4NCjAwMDAwMDA0NCAwMDAwMCBuDQowMDAwMDAwMDk0IDAwMDAwIG4NCjAwMDAwMDE5NCAwMDAwMCBuDQp0cmFpbGVyCnsgL1NpemUgNiAvUm9vdCAxIDAgUiB9CnN0YXJ0eHJlZgo2NDQKJSVFT0Y=';
-    link.download = 'Elite-Campus-Training-Syllabus.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    try {
+        // Method 1: Try to fetch PDF from server endpoint
+        fetch('/api/syllabus-pdf')
+            .then(response => {
+                if (response.ok) {
+                    return response.blob();
+                }
+                throw new Error('PDF not available from server');
+            })
+            .then(blob => {
+                // Create download link for server PDF
+                const url = window.URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'Elite-Campus-Training-Syllabus.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                window.URL.revokeObjectURL(url);
+                
+                // Track download
+                trackConversion('syllabus_download');
+                showSuccessMessage('Syllabus downloaded successfully!');
+            })
+            .catch(() => {
+                // Fallback: Open syllabus page in new tab
+                openSyllabusPage();
+            });
+    } catch (error) {
+        console.error('Download error:', error);
+        // Fallback: Open syllabus page
+        openSyllabusPage();
+    }
+}
+
+// Fallback: Open syllabus information in new tab
+function openSyllabusPage() {
+    const syllabusContent = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Campus Training - Syllabus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-blue-600 mb-2">Elite Campus Training</h1>
+            <h2 class="text-xl font-semibold text-gray-700">Comprehensive Placement Training Syllabus</h2>
+            <p class="text-gray-600 mt-2">Get Placed in 90 Days - From Mock to Offer</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="space-y-6">
+                <div class="border-l-4 border-blue-500 pl-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">
+                        <i class="fas fa-calculator text-blue-500 mr-2"></i>
+                        Quantitative Aptitude
+                    </h3>
+                    <ul class="space-y-1 text-sm text-gray-600">
+                        <li>• Arithmetic & Number Systems</li>
+                        <li>• Profit & Loss, Discounts</li>
+                        <li>• Time, Speed & Work</li>
+                        <li>• Probability & Permutations</li>
+                        <li>• Combinations (P&C)</li>
+                        <li>• Ratios & Proportions</li>
+                        <li>• Averages & Mixtures</li>
+                        <li>• Simple & Compound Interest</li>
+                        <li>• Geometry & Mensuration</li>
+                    </ul>
+                </div>
+                
+                <div class="border-l-4 border-purple-500 pl-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">
+                        <i class="fas fa-brain text-purple-500 mr-2"></i>
+                        Logical Reasoning
+                    </h3>
+                    <ul class="space-y-1 text-sm text-gray-600">
+                        <li>• Puzzles & Seating Arrangements</li>
+                        <li>• Blood Relations</li>
+                        <li>• Coding-Decoding</li>
+                        <li>• Syllogisms & Logic</li>
+                        <li>• Series & Patterns</li>
+                        <li>• Logical Deductions</li>
+                        <li>• Statements & Assumptions</li>
+                        <li>• Arguments & Conclusions</li>
+                        <li>• Direction & Distance</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">
+                        <i class="fas fa-chart-bar text-green-500 mr-2"></i>
+                        Data Interpretation
+                    </h3>
+                    <ul class="space-y-1 text-sm text-gray-600">
+                        <li>• Bar Charts & Graphs</li>
+                        <li>• Line Charts & Trends</li>
+                        <li>• Pie Charts & Analysis</li>
+                        <li>• Tables & Data Sets</li>
+                        <li>• Data Sufficiency</li>
+                        <li>• Comparative Analysis</li>
+                        <li>• Statistical Measures</li>
+                        <li>• Advanced Analytics</li>
+                    </ul>
+                </div>
+                
+                <div class="border-l-4 border-orange-500 pl-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">
+                        <i class="fas fa-comments text-orange-500 mr-2"></i>
+                        Soft Skills & Interview Prep
+                    </h3>
+                    <ul class="space-y-1 text-sm text-gray-600">
+                        <li>• Communication Skills</li>
+                        <li>• Confidence Building</li>
+                        <li>• Interview Etiquette</li>
+                        <li>• Professional Presentation</li>
+                        <li>• Group Discussion</li>
+                        <li>• Technical Interview Prep</li>
+                        <li>• HR Interview Skills</li>
+                        <li>• Body Language & Grooming</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
+            <h3 class="text-lg font-bold text-gray-800 mb-4">4-Step Placement Journey</h3>
+            <div class="grid md:grid-cols-4 gap-4">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-2">1</div>
+                    <h4 class="font-semibold text-sm">Resume Overhaul</h4>
+                    <p class="text-xs text-gray-600">ATS-ready resume + LinkedIn</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center mx-auto mb-2">2</div>
+                    <h4 class="font-semibold text-sm">Mock Interviews</h4>
+                    <p class="text-xs text-gray-600">IIT/IIM trainer practice</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-2">3</div>
+                    <h4 class="font-semibold text-sm">Capstone Projects</h4>
+                    <p class="text-xs text-gray-600">Real-world exposure</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-2">4</div>
+                    <h4 class="font-semibold text-sm">Final Placement</h4>
+                    <p class="text-xs text-gray-600">Company-specific prep</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 bg-gray-900 text-white p-6 rounded-lg text-center">
+            <h3 class="text-xl font-bold mb-2">Ready to Start Your Journey?</h3>
+            <p class="text-gray-300 mb-4">Join 2000+ students who got placed with our proven methodology</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+918438554420" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg">
+                    <i class="fas fa-phone mr-2"></i>Call Now: +91 8438554420
+                </a>
+                <a href="mailto:harishpro24@gmail.com" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg">
+                    <i class="fas fa-envelope mr-2"></i>Email Us
+                </a>
+            </div>
+        </div>
+        
+        <div class="mt-6 text-center">
+            <button onclick="window.print()" class="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg mr-4">
+                <i class="fas fa-print mr-2"></i>Print This Page
+            </button>
+            <button onclick="window.close()" class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 rounded-lg">
+                Close
+            </button>
+        </div>
+    </div>
     
-    // Track download
-    trackConversion('syllabus_download');
+    <style>
+        @media print {
+            body { background: white !important; }
+            .no-print { display: none !important; }
+        }
+    </style>
+</body>
+</html>`;
+
+    // Open in new tab
+    const newWindow = window.open('', '_blank');
+    newWindow.document.write(syllabusContent);
+    newWindow.document.close();
     
-    // Show confirmation
-    showSuccessMessage('Syllabus downloaded successfully!');
+    // Track download attempt
+    trackConversion('syllabus_view');
+    showSuccessMessage('Syllabus opened in new tab. You can print or save it from there.');
 }
 
 // Play demo function
