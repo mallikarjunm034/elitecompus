@@ -25,6 +25,7 @@
 
 ### Interactive Features
 - **Contact Form**: Modal-based form with validation for mock interview bookings
+- **PDF Download**: Proper syllabus PDF generation with fallback page
 - **WhatsApp Integration**: Direct contact button with pre-filled message
 - **FAQ Accordion**: Expandable question/answer sections
 - **Smooth Animations**: Scroll-triggered animations and hover effects
@@ -48,10 +49,11 @@
 ### Public Pages
 - `/` - Main landing page with all sections
 - `/api/contact` (POST) - Contact form submission endpoint
+- `/api/syllabus-pdf` (GET) - Download comprehensive syllabus PDF
 
 ### Interactive Elements
 - **Book Mock Interview** - Opens modal form for lead capture
-- **Download Syllabus** - Triggers PDF download with tracking
+- **Download Syllabus** - Proper PDF download with server endpoint + fallback page
 - **WhatsApp Contact** - Direct messaging to +91 8438554420
 - **Phone Contact** - Click-to-call +91 8438554420
 - **Email Contact** - mailto:harishpro24@gmail.com
