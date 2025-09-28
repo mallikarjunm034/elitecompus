@@ -7,6 +7,7 @@
 
 ## URLs
 - **Live Development Site**: https://3000-ivxh1ac1q4yi36rgmkf3t-6532622b.e2b.dev/
+- **GitHub Repository**: https://github.com/mallikarjunm034/elitecompus
 - **Production**: *Ready for deployment to Cloudflare Pages*
 
 ## Features Implemented ✅
