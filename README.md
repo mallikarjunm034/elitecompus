@@ -7,7 +7,7 @@
 
 ## URLs
 - **🌟 PRODUCTION SITE**: https://elite-campus-training.pages.dev/
-- **🌟 LATEST DEPLOYMENT**: https://8030893f.elite-campus-training.pages.dev/
+- **🌟 LATEST DEPLOYMENT**: https://c19d6f6e.elite-campus-training.pages.dev/
 - **Live Development Site**: https://3000-ixpaahf90med7t5ecgwx2-c07dda5e.sandbox.novita.ai/
 - **GitHub Repository**: https://github.com/mallikarjunm034/elitecompus
 - **Production**: ✅ **DEPLOYED TO CLOUDFLARE PAGES** (Rebranded to "Elite Campus")
@@ -80,10 +80,12 @@ All content has been updated to match the client's comprehensive feedback docume
 - **Mobile Responsive**: Fully optimized for all device sizes
 - **🎠 Auto-Scrolling Testimonials Carousel**: Dynamic carousel with 33 student success stories
   - Auto-slides every 2 seconds towards right
-  - Responsive: Shows 1 card on mobile, 2 on tablet, 3 on desktop
+  - Responsive: Shows 1 card on mobile (< 640px / 5-inch+), 2 on tablet (640px-1024px), 3 on desktop (1024px+)
+  - Optimized for 5-inch and above screens with no text overlapping
   - Navigation arrows and dot indicators
   - Pauses on hover for better user experience
   - Smooth transitions with modern card designs
+  - Responsive text sizes and padding for all screen sizes
 
 ### Technical Features
 - **API Endpoint**: `/api/contact` for form submissions with validation
@@ -179,7 +181,7 @@ pm2 restart elite-campus-training  # Restart service
 - **Platform**: ✅ **LIVE ON CLOUDFLARE PAGES**
 - **Status**: 🚀 **PRODUCTION DEPLOYED** (Updated with comprehensive client feedback)
 - **Main URL**: https://elite-campus-training.pages.dev/
-- **Latest Deployment**: https://8030893f.elite-campus-training.pages.dev/
+- **Latest Deployment**: https://c19d6f6e.elite-campus-training.pages.dev/
 - **Performance**: Optimized for speed and SEO
 - **Mobile**: Fully responsive design
 - **SSL**: ✅ Secured with Cloudflare SSL
