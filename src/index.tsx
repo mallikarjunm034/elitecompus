@@ -235,7 +235,8 @@ app.get('/', (c) => {
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <div class="flex items-center">
-                        <div class="flex-shrink-0">
+                        <div class="flex-shrink-0 flex items-center space-x-3">
+                            <img src="/static/logo.png" alt="Elite Campus Training Logo" class="h-12 w-12 object-contain" />
                             <h1 class="text-xl font-bold text-primary">Elite Campus Training</h1>
                         </div>
                     </div>
@@ -1330,7 +1331,10 @@ app.get('/', (c) => {
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid md:grid-cols-4 gap-8">
                     <div class="md:col-span-2">
-                        <h3 class="text-2xl font-bold mb-4">Elite Campus Training</h3>
+                        <div class="flex items-center space-x-3 mb-4">
+                            <img src="/static/logo.png" alt="Elite Campus Training Logo" class="h-16 w-16 object-contain" />
+                            <h3 class="text-2xl font-bold">Elite Campus Training</h3>
+                        </div>
                         <p class="text-gray-400 mb-6">
                             Transforming careers through expert guidance and proven methodologies. 
                             Your success is our commitment.
