@@ -67,7 +67,7 @@ All content has been updated to match the client's comprehensive feedback docume
 - **4-Step Journey**: Resume → Mock Interviews → Projects → Final Placement
 - **Comprehensive Curriculum**: 3 sections with Core Aptitude, DSA, and Life Skills
 - **Expert Trainers**: Complete profiles of all 6 trainers with detailed backgrounds
-- **Student Testimonials**: Real success stories from placed students across multiple companies
+- **Student Testimonials**: 33 real success stories from placed students in a dynamic auto-scrolling carousel
 - **FAQ Section**: Complete 10-question FAQ addressing all student concerns
 - **Final CTA**: Prominent call-to-action with "Join 1,20,000+ Community"
 
@@ -78,6 +78,12 @@ All content has been updated to match the client's comprehensive feedback docume
 - **FAQ Accordion**: Expandable question/answer sections
 - **Smooth Animations**: Scroll-triggered animations and hover effects
 - **Mobile Responsive**: Fully optimized for all device sizes
+- **🎠 Auto-Scrolling Testimonials Carousel**: Dynamic carousel with 33 student success stories
+  - Auto-slides every 2 seconds towards right
+  - Responsive: Shows 1 card on mobile, 2 on tablet, 3 on desktop
+  - Navigation arrows and dot indicators
+  - Pauses on hover for better user experience
+  - Smooth transitions with modern card designs
 
 ### Technical Features
 - **API Endpoint**: `/api/contact` for form submissions with validation
@@ -178,7 +184,7 @@ pm2 restart elite-campus-training  # Restart service
 - **Mobile**: Fully responsive design
 - **SSL**: ✅ Secured with Cloudflare SSL
 - **Global CDN**: ✅ Available worldwide
-- **Last Updated**: 2025-10-14 (Client Feedback Implementation)
+- **Last Updated**: 2025-10-14 (Auto-Scrolling Testimonials Carousel)
 
 ## Contact Information
 - **CEO**: Harish Kumar
