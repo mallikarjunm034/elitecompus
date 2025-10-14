@@ -1,4 +1,4 @@
-// Elite Campus Training - Interactive JavaScript
+// Elite Campus - Interactive JavaScript
 
 // Global state
 let isModalOpen = false;
@@ -334,14 +334,14 @@ function openSyllabusPage() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Campus Training - Syllabus</title>
+    <title>Elite Campus - Syllabus</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 p-8">
     <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
         <div class="text-center mb-8">
-            <h1 class="text-3xl font-bold text-blue-600 mb-2">Elite Campus Training</h1>
+            <h1 class="text-3xl font-bold text-blue-600 mb-2">Elite Campus</h1>
             <h2 class="text-xl font-semibold text-gray-700">Comprehensive Placement Training Syllabus</h2>
             <p class="text-gray-600 mt-2">Get Placed in 90 Days - From Mock to Offer</p>
         </div>
@@ -527,7 +527,7 @@ function scrollToTestimonials() {
 // WhatsApp integration
 function openWhatsApp() {
     const phone = '+918438554420';
-    const message = encodeURIComponent('Hi! I am interested in Elite Campus Training programs. Please provide more details.');
+    const message = encodeURIComponent('Hi! I am interested in Elite Campus programs. Please provide more details.');
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
     
     trackConversion('whatsapp_contact');

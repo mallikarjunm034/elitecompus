@@ -81,7 +81,7 @@ stream
 BT
 /F1 20 Tf
 50 700 Td
-(Elite Campus Training - Comprehensive Syllabus) Tj
+(Elite Campus - Comprehensive Syllabus) Tj
 0 -40 Td
 /F1 16 Tf
 (Get Placed in 90 Days - From Mock to Offer) Tj
@@ -184,12 +184,12 @@ app.get('/', (c) => {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Elite Campus Training - Get Placed in 90 Days | IIM/IIT Mentors</title>
+        <title>Elite Campus - Get Placed in 90 Days | IIM/IIT Mentors</title>
         <meta name="description" content="Get placed in top companies like TCS, Deloitte, Infosys with our 90% placement success rate. Learn from IIM/IIT mentors. Book free mock interview now!">
         <meta name="keywords" content="placement training, mock interview, IIT IIM mentors, campus placement, job interview preparation">
         
         <!-- Open Graph tags for social sharing -->
-        <meta property="og:title" content="Elite Campus Training - Get Placed in 90 Days">
+        <meta property="og:title" content="Elite Campus - Get Placed in 90 Days">
         <meta property="og:description" content="Learn from IIM/IIT mentors & industry experts with a 90%+ placement success record.">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://elite-campus-training.pages.dev">
@@ -236,8 +236,8 @@ app.get('/', (c) => {
                 <div class="flex justify-between items-center h-16">
                     <div class="flex items-center">
                         <div class="flex-shrink-0 flex items-center space-x-3">
-                            <img src="/static/logo.png" alt="Elite Campus Training Logo" class="h-12 w-12 object-contain" />
-                            <h1 class="text-xl font-bold text-primary">Elite Campus Training</h1>
+                            <img src="/static/logo.png" alt="Elite Campus Logo" class="h-12 w-12 object-contain" />
+                            <h1 class="text-xl font-bold text-primary">Elite Campus</h1>
                         </div>
                     </div>
                     <div class="hidden md:block">
@@ -381,7 +381,7 @@ app.get('/', (c) => {
                 <div class="bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-2xl text-center">
                     <h3 class="text-2xl font-bold mb-4">Not Anymore!</h3>
                     <p class="text-xl text-blue-100">
-                        At Elite Campus Training, we specialize in enhancing students' problem-solving abilities across numerical quantitative aptitude, logical reasoning, verbal ability, and data sufficiency.
+                        At Elite Campus, we specialize in enhancing students' problem-solving abilities across numerical quantitative aptitude, logical reasoning, verbal ability, and data sufficiency.
                     </p>
                 </div>
             </div>
@@ -1165,7 +1165,7 @@ app.get('/', (c) => {
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                         <button onclick="toggleFAQ(1)" class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition-colors">
                             <div class="flex items-center justify-between">
-                                <h3 class="text-lg font-semibold text-dark">1. What exactly is the Elite Campus Training Program?</h3>
+                                <h3 class="text-lg font-semibold text-dark">1. What exactly is the Elite Campus Program?</h3>
                                 <i class="fas fa-chevron-down text-gray-400 transition-transform" id="icon-1"></i>
                             </div>
                         </button>
@@ -1332,8 +1332,8 @@ app.get('/', (c) => {
                 <div class="grid md:grid-cols-4 gap-8">
                     <div class="md:col-span-2">
                         <div class="flex items-center space-x-3 mb-4">
-                            <img src="/static/logo.png" alt="Elite Campus Training Logo" class="h-16 w-16 object-contain" />
-                            <h3 class="text-2xl font-bold">Elite Campus Training</h3>
+                            <img src="/static/logo.png" alt="Elite Campus Logo" class="h-16 w-16 object-contain" />
+                            <h3 class="text-2xl font-bold">Elite Campus</h3>
                         </div>
                         <p class="text-gray-400 mb-6">
                             Transforming careers through expert guidance and proven methodologies. 
@@ -1393,7 +1393,7 @@ app.get('/', (c) => {
                 
                 <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
                     <div class="text-gray-400 text-sm mb-4 md:mb-0">
-                        © 2024 Elite Campus Training. All rights reserved.
+                        © 2024 Elite Campus. All rights reserved.
                     </div>
                     <div class="flex space-x-6 text-sm">
                         <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
