@@ -1047,92 +1047,24 @@ app.get('/', (c) => {
                     <p class="text-xl text-gray-600">Real results from real students</p>
                 </div>
                 
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Testimonial 1 -->
-                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-dark">Ananya R.</h4>
-                                <div class="text-sm text-gray-600">NIT Trichy</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 mb-6 italic">
-                            "The personalized mocks & resume review converted my 0 interviews into 3 offers."
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="text-sm">
-                                <div class="font-semibold text-primary">Software Engineer</div>
-                                <div class="text-gray-600">TCS</div>
-                            </div>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
+                <!-- Carousel Container -->
+                <div class="relative overflow-hidden">
+                    <!-- Carousel Track -->
+                    <div id="testimonialCarousel" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Testimonials will be dynamically inserted here -->
                     </div>
                     
-                    <!-- Testimonial 2 -->
-                    <div class="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-xl">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-dark">Ravi K.</h4>
-                                <div class="text-sm text-gray-600">Vasavi</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 mb-6 italic">
-                            "The training gave me interview confidence and a clear roadmap."
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="text-sm">
-                                <div class="font-semibold text-green-600">Analyst</div>
-                                <div class="text-gray-600">Deloitte</div>
-                            </div>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Navigation Arrows -->
+                    <button onclick="prevTestimonial()" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg z-10 transition-all">
+                        <i class="fas fa-chevron-left text-primary text-xl"></i>
+                    </button>
+                    <button onclick="nextTestimonial()" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg z-10 transition-all">
+                        <i class="fas fa-chevron-right text-primary text-xl"></i>
+                    </button>
                     
-                    <!-- Testimonial 3 -->
-                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-dark">Megha S.</h4>
-                                <div class="text-sm text-gray-600">VNR</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 mb-6 italic">
-                            "The mock drills were exactly like real interviews - I cracked Infosys on the 1st attempt."
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="text-sm">
-                                <div class="font-semibold text-purple-600">Associate</div>
-                                <div class="text-gray-600">Infosys</div>
-                            </div>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
+                    <!-- Dots Indicator -->
+                    <div id="carouselDots" class="flex justify-center mt-8 space-x-2">
+                        <!-- Dots will be dynamically inserted here -->
                     </div>
                 </div>
                 
@@ -1466,6 +1398,7 @@ app.get('/', (c) => {
 
         <!-- JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/axios@1.6.0/dist/axios.min.js"></script>
+        <script src="/static/testimonials-data.js"></script>
         <script src="/static/app.js"></script>
     </body>
     </html>

@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeAnimations();
     initializeScrollEffects();
     initializeCounterAnimations();
+    initializeTestimonialCarousel();
     attachEventListeners();
 });
 
@@ -608,4 +609,223 @@ if ('serviceWorker' in navigator) {
                 console.log('SW registration failed: ', registrationError);
             });
     });
+}
+
+// ========================================
+// TESTIMONIAL CAROUSEL FUNCTIONALITY
+// ========================================
+
+let currentTestimonialIndex = 0;
+let testimonialAutoScrollInterval = null;
+let testimonialsPerView = 3; // Default for desktop
+
+// Initialize testimonial carousel
+function initializeTestimonialCarousel() {
+    if (typeof testimonialsData === 'undefined' || !testimonialsData || testimonialsData.length === 0) {
+        console.warn('No testimonials data available');
+        return;
+    }
+    
+    // Update testimonials per view based on screen size
+    updateTestimonialsPerView();
+    window.addEventListener('resize', debounce(updateTestimonialsPerView, 250));
+    
+    // Render testimonials
+    renderTestimonials();
+    
+    // Start auto-scroll (every 2 seconds towards right)
+    startAutoScroll();
+    
+    // Pause auto-scroll on hover
+    const carousel = document.getElementById('testimonialCarousel');
+    if (carousel) {
+        carousel.addEventListener('mouseenter', stopAutoScroll);
+        carousel.addEventListener('mouseleave', startAutoScroll);
+    }
+}
+
+// Update testimonials per view based on screen size
+function updateTestimonialsPerView() {
+    const width = window.innerWidth;
+    if (width < 768) {
+        testimonialsPerView = 1; // Mobile: 1 testimonial
+    } else if (width < 1024) {
+        testimonialsPerView = 2; // Tablet: 2 testimonials
+    } else {
+        testimonialsPerView = 3; // Desktop: 3 testimonials
+    }
+    
+    // Re-render if carousel is already initialized
+    if (document.getElementById('testimonialCarousel').children.length > 0) {
+        renderTestimonials();
+        updateCarouselPosition();
+    }
+}
+
+// Render testimonials
+function renderTestimonials() {
+    const carousel = document.getElementById('testimonialCarousel');
+    const dotsContainer = document.getElementById('carouselDots');
+    
+    if (!carousel || !dotsContainer) return;
+    
+    // Clear existing content
+    carousel.innerHTML = '';
+    dotsContainer.innerHTML = '';
+    
+    // Calculate total pages
+    const totalPages = Math.ceil(testimonialsData.length / testimonialsPerView);
+    
+    // Gradient colors for cards
+    const gradients = [
+        'from-blue-50 to-indigo-50',
+        'from-green-50 to-teal-50',
+        'from-purple-50 to-pink-50',
+        'from-orange-50 to-amber-50',
+        'from-cyan-50 to-blue-50',
+        'from-rose-50 to-pink-50'
+    ];
+    
+    const iconColors = [
+        'bg-primary',
+        'bg-green-600',
+        'bg-purple-600',
+        'bg-orange-600',
+        'bg-cyan-600',
+        'bg-rose-600'
+    ];
+    
+    const roleColors = [
+        'text-primary',
+        'text-green-600',
+        'text-purple-600',
+        'text-orange-600',
+        'text-cyan-600',
+        'text-rose-600'
+    ];
+    
+    // Create testimonial cards
+    testimonialsData.forEach((testimonial, index) => {
+        const colorIndex = index % gradients.length;
+        const stars = '★'.repeat(testimonial.rating) + '☆'.repeat(5 - testimonial.rating);
+        
+        const card = document.createElement('div');
+        card.className = `flex-shrink-0 px-2`;
+        card.style.width = `${100 / testimonialsPerView}%`;
+        
+        card.innerHTML = `
+            <div class="bg-gradient-to-br ${gradients[colorIndex]} p-6 rounded-xl h-full shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 ${iconColors[colorIndex]} text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="min-w-0">
+                        <h4 class="font-bold text-dark truncate">${testimonial.name}</h4>
+                        <div class="text-sm text-gray-600 truncate">${testimonial.college}</div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4 italic text-sm leading-relaxed line-clamp-3">
+                    "${testimonial.quote}"
+                </p>
+                <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                    <div class="text-sm min-w-0 flex-1">
+                        <div class="font-semibold ${roleColors[colorIndex]} truncate">${testimonial.role}</div>
+                        <div class="text-gray-600 truncate">${testimonial.company}</div>
+                    </div>
+                    <div class="flex text-yellow-400 text-sm ml-2 flex-shrink-0">
+                        ${stars}
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        carousel.appendChild(card);
+    });
+    
+    // Create dots for pagination
+    for (let i = 0; i < totalPages; i++) {
+        const dot = document.createElement('button');
+        dot.className = `w-2 h-2 rounded-full transition-all ${i === 0 ? 'bg-primary w-6' : 'bg-gray-300'}`;
+        dot.setAttribute('onclick', `goToTestimonial(${i * testimonialsPerView})`);
+        dot.setAttribute('aria-label', `Go to testimonial page ${i + 1}`);
+        dotsContainer.appendChild(dot);
+    }
+}
+
+// Update carousel position
+function updateCarouselPosition() {
+    const carousel = document.getElementById('testimonialCarousel');
+    if (!carousel) return;
+    
+    // Calculate offset based on current index
+    const offset = -(currentTestimonialIndex * (100 / testimonialsPerView));
+    carousel.style.transform = `translateX(${offset}%)`;
+    
+    // Update dots
+    updateDots();
+}
+
+// Update active dot
+function updateDots() {
+    const dots = document.querySelectorAll('#carouselDots button');
+    const currentPage = Math.floor(currentTestimonialIndex / testimonialsPerView);
+    
+    dots.forEach((dot, index) => {
+        if (index === currentPage) {
+            dot.className = 'w-6 h-2 rounded-full bg-primary transition-all';
+        } else {
+            dot.className = 'w-2 h-2 rounded-full bg-gray-300 transition-all';
+        }
+    });
+}
+
+// Go to next testimonial (slide towards right)
+function nextTestimonial() {
+    currentTestimonialIndex += testimonialsPerView;
+    
+    // Loop back to start if at the end
+    if (currentTestimonialIndex >= testimonialsData.length) {
+        currentTestimonialIndex = 0;
+    }
+    
+    updateCarouselPosition();
+}
+
+// Go to previous testimonial
+function prevTestimonial() {
+    currentTestimonialIndex -= testimonialsPerView;
+    
+    // Loop to end if at the start
+    if (currentTestimonialIndex < 0) {
+        const totalPages = Math.ceil(testimonialsData.length / testimonialsPerView);
+        currentTestimonialIndex = (totalPages - 1) * testimonialsPerView;
+    }
+    
+    updateCarouselPosition();
+}
+
+// Go to specific testimonial
+function goToTestimonial(index) {
+    currentTestimonialIndex = index;
+    updateCarouselPosition();
+    
+    // Restart auto-scroll
+    stopAutoScroll();
+    startAutoScroll();
+}
+
+// Start auto-scroll (every 2 seconds towards right)
+function startAutoScroll() {
+    stopAutoScroll(); // Clear any existing interval
+    testimonialAutoScrollInterval = setInterval(() => {
+        nextTestimonial(); // Slide towards right
+    }, 2000); // 2 seconds
+}
+
+// Stop auto-scroll
+function stopAutoScroll() {
+    if (testimonialAutoScrollInterval) {
+        clearInterval(testimonialAutoScrollInterval);
+        testimonialAutoScrollInterval = null;
+    }
 }
