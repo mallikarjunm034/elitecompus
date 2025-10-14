@@ -295,6 +295,24 @@ input:focus, textarea:focus {
     background: #1e3a8a;
 }
 
+/* Testimonial Carousel Styles */
+#testimonialCarousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Carousel container overflow */
+#testimonials .relative {
+    overflow: hidden;
+}
+
 /* Print styles */
 @media print {
     .no-print {

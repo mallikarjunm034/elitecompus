@@ -621,10 +621,14 @@ let testimonialsPerView = 3; // Default for desktop
 
 // Initialize testimonial carousel
 function initializeTestimonialCarousel() {
+    console.log('🎠 Initializing testimonial carousel...');
+    
     if (typeof testimonialsData === 'undefined' || !testimonialsData || testimonialsData.length === 0) {
-        console.warn('No testimonials data available');
+        console.error('❌ No testimonials data available');
         return;
     }
+    
+    console.log(`✅ Loaded ${testimonialsData.length} testimonials`);
     
     // Update testimonials per view based on screen size
     updateTestimonialsPerView();
@@ -635,6 +639,13 @@ function initializeTestimonialCarousel() {
     
     // Start auto-scroll (every 2 seconds towards right)
     startAutoScroll();
+    console.log('✅ Auto-scroll started (every 2 seconds)');
+    
+    // Test scroll after 1 second to verify it's working
+    setTimeout(() => {
+        console.log('🧪 Test scroll: Moving to next testimonial');
+        nextTestimonial();
+    }, 1000);
     
     // Pause auto-scroll on hover
     const carousel = document.getElementById('testimonialCarousel');
@@ -755,11 +766,15 @@ function renderTestimonials() {
 // Update carousel position
 function updateCarouselPosition() {
     const carousel = document.getElementById('testimonialCarousel');
-    if (!carousel) return;
+    if (!carousel) {
+        console.error('❌ Carousel element not found');
+        return;
+    }
     
     // Calculate offset based on current index
     const offset = -(currentTestimonialIndex * (100 / testimonialsPerView));
     carousel.style.transform = `translateX(${offset}%)`;
+    console.log(`🎯 Transform: translateX(${offset}%) - Index: ${currentTestimonialIndex}, PerView: ${testimonialsPerView}`);
     
     // Update dots
     updateDots();
@@ -781,13 +796,16 @@ function updateDots() {
 
 // Go to next testimonial (slide towards right)
 function nextTestimonial() {
+    const oldIndex = currentTestimonialIndex;
     currentTestimonialIndex += testimonialsPerView;
     
     // Loop back to start if at the end
     if (currentTestimonialIndex >= testimonialsData.length) {
         currentTestimonialIndex = 0;
+        console.log('🔄 Looping back to start');
     }
     
+    console.log(`➡️ Next: ${oldIndex} → ${currentTestimonialIndex} (showing ${testimonialsPerView} cards)`);
     updateCarouselPosition();
 }
 
