@@ -658,13 +658,15 @@ function initializeTestimonialCarousel() {
 // Update testimonials per view based on screen size
 function updateTestimonialsPerView() {
     const width = window.innerWidth;
-    if (width < 768) {
-        testimonialsPerView = 1; // Mobile: 1 testimonial
+    if (width < 640) {
+        testimonialsPerView = 1; // Small mobile: 1 testimonial (< 640px / ~5 inch)
     } else if (width < 1024) {
-        testimonialsPerView = 2; // Tablet: 2 testimonials
+        testimonialsPerView = 2; // Tablet and larger phones: 2 testimonials (640px - 1024px)
     } else {
-        testimonialsPerView = 3; // Desktop: 3 testimonials
+        testimonialsPerView = 3; // Desktop: 3 testimonials (>= 1024px)
     }
+    
+    console.log(`📱 Screen width: ${width}px, Cards per view: ${testimonialsPerView}`);
     
     // Re-render if carousel is already initialized
     if (document.getElementById('testimonialCarousel').children.length > 0) {
@@ -721,29 +723,29 @@ function renderTestimonials() {
         const stars = '★'.repeat(testimonial.rating) + '☆'.repeat(5 - testimonial.rating);
         
         const card = document.createElement('div');
-        card.className = `flex-shrink-0 px-2`;
+        card.className = `flex-shrink-0 px-2 sm:px-3`;
         card.style.width = `${100 / testimonialsPerView}%`;
         
         card.innerHTML = `
-            <div class="bg-gradient-to-br ${gradients[colorIndex]} p-6 rounded-xl h-full shadow-sm hover:shadow-md transition-shadow">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 ${iconColors[colorIndex]} text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                        <i class="fas fa-quote-left"></i>
+            <div class="bg-gradient-to-br ${gradients[colorIndex]} p-4 sm:p-5 md:p-6 rounded-xl h-full shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                <div class="flex items-start mb-3 sm:mb-4">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 ${iconColors[colorIndex]} text-white rounded-full flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0">
+                        <i class="fas fa-quote-left text-sm sm:text-base"></i>
                     </div>
-                    <div class="min-w-0">
-                        <h4 class="font-bold text-dark truncate">${testimonial.name}</h4>
-                        <div class="text-sm text-gray-600 truncate">${testimonial.college}</div>
+                    <div class="min-w-0 flex-1">
+                        <h4 class="font-bold text-dark text-sm sm:text-base leading-tight mb-1">${testimonial.name}</h4>
+                        <div class="text-xs sm:text-sm text-gray-600 leading-tight">${testimonial.college}</div>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-4 italic text-sm leading-relaxed line-clamp-3">
+                <p class="text-gray-700 mb-3 sm:mb-4 italic text-xs sm:text-sm leading-relaxed flex-1 overflow-hidden" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
                     "${testimonial.quote}"
                 </p>
-                <div class="flex items-center justify-between pt-4 border-t border-gray-200">
-                    <div class="text-sm min-w-0 flex-1">
-                        <div class="font-semibold ${roleColors[colorIndex]} truncate">${testimonial.role}</div>
-                        <div class="text-gray-600 truncate">${testimonial.company}</div>
+                <div class="flex items-center justify-between pt-3 sm:pt-4 border-t border-gray-200">
+                    <div class="text-xs sm:text-sm min-w-0 flex-1 mr-2">
+                        <div class="font-semibold ${roleColors[colorIndex]} leading-tight mb-1">${testimonial.role}</div>
+                        <div class="text-gray-600 leading-tight">${testimonial.company}</div>
                     </div>
-                    <div class="flex text-yellow-400 text-sm ml-2 flex-shrink-0">
+                    <div class="flex text-yellow-400 text-xs sm:text-sm flex-shrink-0">
                         ${stars}
                     </div>
                 </div>

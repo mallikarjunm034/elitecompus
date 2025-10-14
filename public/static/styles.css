@@ -306,11 +306,36 @@ input:focus, textarea:focus {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    word-break: break-word;
 }
 
 /* Carousel container overflow */
 #testimonials .relative {
     overflow: hidden;
+}
+
+/* Responsive testimonial cards */
+@media (max-width: 640px) {
+    #testimonialCarousel > div {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    #testimonialCarousel .rounded-xl {
+        min-height: 280px;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    #testimonialCarousel .rounded-xl {
+        min-height: 320px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #testimonialCarousel .rounded-xl {
+        min-height: 340px;
+    }
 }
 
 /* Print styles */

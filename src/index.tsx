@@ -1042,28 +1042,28 @@ app.get('/', (c) => {
         <!-- Testimonials Section -->
         <section class="py-16 bg-white" id="testimonials">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-dark mb-4">Student Success Stories</h2>
-                    <p class="text-xl text-gray-600">Real results from real students</p>
+                <div class="text-center mb-8 sm:mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-dark mb-3 sm:mb-4">Student Success Stories</h2>
+                    <p class="text-lg sm:text-xl text-gray-600">Real results from real students</p>
                 </div>
                 
                 <!-- Carousel Container -->
-                <div class="relative overflow-hidden">
+                <div class="relative overflow-hidden px-8 sm:px-10 md:px-12">
                     <!-- Carousel Track -->
                     <div id="testimonialCarousel" class="flex transition-transform duration-500 ease-in-out">
                         <!-- Testimonials will be dynamically inserted here -->
                     </div>
                     
                     <!-- Navigation Arrows -->
-                    <button onclick="prevTestimonial()" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg z-10 transition-all">
-                        <i class="fas fa-chevron-left text-primary text-xl"></i>
+                    <button onclick="prevTestimonial()" class="absolute left-0 sm:left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 sm:p-3 rounded-full shadow-lg z-10 transition-all">
+                        <i class="fas fa-chevron-left text-primary text-base sm:text-xl"></i>
                     </button>
-                    <button onclick="nextTestimonial()" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg z-10 transition-all">
-                        <i class="fas fa-chevron-right text-primary text-xl"></i>
+                    <button onclick="nextTestimonial()" class="absolute right-0 sm:right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 sm:p-3 rounded-full shadow-lg z-10 transition-all">
+                        <i class="fas fa-chevron-right text-primary text-base sm:text-xl"></i>
                     </button>
                     
                     <!-- Dots Indicator -->
-                    <div id="carouselDots" class="flex justify-center mt-8 space-x-2">
+                    <div id="carouselDots" class="flex justify-center mt-6 sm:mt-8 space-x-2">
                         <!-- Dots will be dynamically inserted here -->
                     </div>
                 </div>
