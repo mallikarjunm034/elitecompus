@@ -459,36 +459,46 @@ app.get('/', (c) => {
                 <!-- Trusted Colleges -->
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold text-dark mb-8">Trusted by India's Top Colleges</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center">
-                        <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                            <div class="text-primary font-semibold text-sm">VNR Vignana Jyothi</div>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 items-center">
+                        <div class="flex flex-col items-center justify-center p-4 hover:bg-gray-50 rounded-lg transition-all hover:shadow-md">
+                            <img src="/static/logos/vnr-vignana-jyothi.png" alt="VNR Vignana Jyothi" class="h-16 w-auto object-contain mb-2" />
+                            <div class="text-gray-700 font-medium text-xs">VNR Vignana Jyothi</div>
                         </div>
-                        <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                            <div class="text-primary font-semibold text-sm">CBIT</div>
+                        <div class="flex flex-col items-center justify-center p-4 hover:bg-gray-50 rounded-lg transition-all hover:shadow-md">
+                            <img src="/static/logos/cbit.png" alt="CBIT" class="h-16 w-auto object-contain mb-2" />
+                            <div class="text-gray-700 font-medium text-xs">CBIT</div>
                         </div>
-                        <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                            <div class="text-primary font-semibold text-sm">MGIT</div>
+                        <div class="flex flex-col items-center justify-center p-4 hover:bg-gray-50 rounded-lg transition-all hover:shadow-md">
+                            <img src="/static/logos/mgit.png" alt="MGIT" class="h-16 w-auto object-contain mb-2" />
+                            <div class="text-gray-700 font-medium text-xs">MGIT</div>
                         </div>
-                        <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                            <div class="text-primary font-semibold text-sm">Vasavi</div>
+                        <div class="flex flex-col items-center justify-center p-4 hover:bg-gray-50 rounded-lg transition-all hover:shadow-md">
+                            <img src="/static/logos/vasavi.jpeg" alt="Vasavi" class="h-16 w-auto object-contain mb-2" />
+                            <div class="text-gray-700 font-medium text-xs">Vasavi</div>
                         </div>
-                        <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                            <div class="text-primary font-semibold text-sm">Anurag University</div>
+                        <div class="flex flex-col items-center justify-center p-4 hover:bg-gray-50 rounded-lg transition-all hover:shadow-md">
+                            <img src="/static/logos/anurag-university.png" alt="Anurag University" class="h-16 w-auto object-contain mb-2" />
+                            <div class="text-gray-700 font-medium text-xs">Anurag University</div>
                         </div>
-                        <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                            <div class="text-primary font-semibold text-sm">Narayanamma</div>
+                        <div class="flex flex-col items-center justify-center p-4 hover:bg-gray-50 rounded-lg transition-all hover:shadow-md">
+                            <img src="/static/logos/narayanamma.png" alt="Narayanamma" class="h-16 w-auto object-contain mb-2" />
+                            <div class="text-gray-700 font-medium text-xs">Narayanamma</div>
                         </div>
-                        <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                            <div class="text-primary font-semibold text-sm">Sreenidhi</div>
+                        <div class="flex flex-col items-center justify-center p-4 hover:bg-gray-50 rounded-lg transition-all hover:shadow-md">
+                            <img src="/static/logos/srinidhi.jpeg" alt="Srinidhi" class="h-16 w-auto object-contain mb-2" />
+                            <div class="text-gray-700 font-medium text-xs">Srinidhi</div>
                         </div>
-                        <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                            <div class="text-primary font-semibold text-sm">Vignan</div>
+                        <div class="flex flex-col items-center justify-center p-4 hover:bg-gray-50 rounded-lg transition-all hover:shadow-md">
+                            <img src="/static/logos/vignan.png" alt="Vignan" class="h-16 w-auto object-contain mb-2" />
+                            <div class="text-gray-700 font-medium text-xs">Vignan</div>
                         </div>
-                        <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                            <div class="text-primary font-semibold text-sm">KLU</div>
+                        <div class="flex flex-col items-center justify-center p-4 hover:bg-gray-50 rounded-lg transition-all hover:shadow-md">
+                            <img src="/static/logos/klu.png" alt="KLU" class="h-16 w-auto object-contain mb-2" />
+                            <div class="text-gray-700 font-medium text-xs">KLU</div>
                         </div>
-                        <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                            <div class="text-primary font-semibold text-sm">Sidhartha</div>
+                        <div class="flex flex-col items-center justify-center p-4 hover:bg-gray-50 rounded-lg transition-all hover:shadow-md">
+                            <img src="/static/logos/sidhartha.png" alt="Sidhartha" class="h-16 w-auto object-contain mb-2" />
+                            <div class="text-gray-700 font-medium text-xs">Sidhartha</div>
                         </div>
                     </div>
                 </div>
