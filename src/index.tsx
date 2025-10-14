@@ -272,15 +272,17 @@ app.get('/', (c) => {
                             </span>
                         </div>
                         <h1 class="text-4xl lg:text-6xl font-bold text-dark mb-6 leading-tight">
-                            Get Placed in 
-                            <span class="text-primary">90 Days</span>
-                            <br>
-                            <span class="text-secondary">From Mock to Offer</span>
+                            Unlock Your Dream Job with our 
+                            <span class="text-primary">Expert-Led Training</span>
                         </h1>
-                        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                            Learn from IIM/IIT mentors & industry experts with a 90%+ placement success record. 
-                            Transform your career with personalized training and guaranteed results.
-                        </p>
+                        <h2 class="text-2xl text-gray-700 mb-8 leading-relaxed font-medium">
+                            Learn from IIM/IIT mentors & industry experts to Help You Master Core Concepts, Build Confidence, and Excel in Campus Recruitment Exams.
+                        </h2>
+                        <div class="mb-6">
+                            <span class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full text-lg font-bold inline-block shadow-lg">
+                                🚀 Get Trained Today. Get Placed. Get Ahead
+                            </span>
+                        </div>
                         
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
                             <button onclick="openModal()" class="bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg">
@@ -310,14 +312,14 @@ app.get('/', (c) => {
                                     <i class="fas fa-graduation-cap text-4xl text-white"></i>
                                 </div>
                                 <h3 class="text-2xl font-bold text-dark mb-4">Success Guaranteed</h3>
-                                <p class="text-gray-600 mb-6">Join 2000+ students who landed their dream jobs</p>
+                                <p class="text-gray-600 mb-6">Join 120,000+ students who landed their dream jobs</p>
                                 <div class="grid grid-cols-2 gap-4 text-center">
                                     <div class="bg-gray-50 p-4 rounded-lg">
-                                        <div class="text-2xl font-bold text-primary">2000+</div>
+                                        <div class="text-2xl font-bold text-primary">120,000+</div>
                                         <div class="text-sm text-gray-600">Students Placed</div>
                                     </div>
                                     <div class="bg-gray-50 p-4 rounded-lg">
-                                        <div class="text-2xl font-bold text-success">8 LPA</div>
+                                        <div class="text-2xl font-bold text-success">6 LPA</div>
                                         <div class="text-sm text-gray-600">Average CTC</div>
                                     </div>
                                 </div>
@@ -331,15 +333,141 @@ app.get('/', (c) => {
             </div>
         </section>
 
+        <!-- The Problem & Pain Point Section -->
+        <section class="py-16 bg-white border-b">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl font-bold text-dark mb-6">Why Do Students Lose Out on Dream Placements?</h2>
+                    <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                        Every year, thousands of students lose out on dream placements — not because they aren't smart, but because they don't get access to the right trainers, clear explanations, and effective practice systems.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <div class="bg-red-50 p-6 rounded-xl border-2 border-red-200">
+                        <div class="w-12 h-12 bg-red-500 text-white rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-user-slash"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark mb-2">Lack of Access</h3>
+                        <p class="text-gray-600 text-sm">No access to top-quality trainers from prestigious institutions with experience and credibility.</p>
+                    </div>
+                    
+                    <div class="bg-orange-50 p-6 rounded-xl border-2 border-orange-200">
+                        <div class="w-12 h-12 bg-orange-500 text-white rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark mb-2">Concept Application</h3>
+                        <p class="text-gray-600 text-sm">Difficulty understanding and applying core concepts in mathematical reasoning and problem-solving.</p>
+                    </div>
+                    
+                    <div class="bg-yellow-50 p-6 rounded-xl border-2 border-yellow-200">
+                        <div class="w-12 h-12 bg-yellow-500 text-white rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark mb-2">Time Management</h3>
+                        <p class="text-gray-600 text-sm">Challenges managing time effectively during exams, leading to incomplete sections or rushed answers.</p>
+                    </div>
+                    
+                    <div class="bg-red-50 p-6 rounded-xl border-2 border-red-200">
+                        <div class="w-12 h-12 bg-red-600 text-white rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark mb-2">Insufficient Practice</h3>
+                        <p class="text-gray-600 text-sm">Hindered performance due to lack of sufficient practice and effective exam strategies.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-2xl text-center">
+                    <h3 class="text-2xl font-bold mb-4">Not Anymore!</h3>
+                    <p class="text-xl text-blue-100">
+                        At Elite Campus Training, we specialize in enhancing students' problem-solving abilities across numerical quantitative aptitude, logical reasoning, verbal ability, and data sufficiency.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Solution: Campus Recruitment Accelerator -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-dark mb-4">The Solution: Our Campus Recruitment Accelerator</h2>
+                    <p class="text-xl text-gray-600">Here's what you'll overcome with our program</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-start mb-4">
+                            <div class="w-14 h-14 bg-primary text-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-rocket text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-dark mb-2">\ud83d\ude80 Elite Mentorship</h3>
+                                <p class="text-gray-600">Learn directly from top-tier trainers and industry veterans who've helped students land at leading companies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-start mb-4">
+                            <div class="w-14 h-14 bg-purple-600 text-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-puzzle-piece text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-dark mb-2">\ud83e\udde9 Concept Mastery System</h3>
+                                <p class="text-gray-600">Simplify and master problem-solving, logical reasoning, and data interpretation using real company questions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-start mb-4">
+                            <div class="w-14 h-14 bg-orange-600 text-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-stopwatch text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-dark mb-2">\u23f1 Time Attack Framework</h3>
+                                <p class="text-gray-600">Learn proven time-management techniques to complete every section with precision and confidence.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-start mb-4">
+                            <div class="w-14 h-14 bg-green-600 text-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-sync-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-dark mb-2">\ud83d\udd01 Practice-to-Placement Model</h3>
+                                <p class="text-gray-600">Weekly mock exams, feedback loops, and personalized improvement plans until you're placement-ready.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="text-xl text-gray-700 mb-6 font-semibold">No more confusion. No more panic. Just clarity, confidence, and results.</p>
+                    <button onclick="openModal()" class="bg-gradient-to-r from-primary to-secondary hover:from-blue-700 hover:to-blue-600 text-white px-10 py-4 rounded-lg font-bold text-xl transition-all transform hover:scale-105 shadow-lg">
+                        \ud83d\ude80 Get Trained Today. Get Placed. Get Ahead
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <!-- Trust & Social Proof Section -->
         <section class="py-16 bg-white border-b">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Trusted Colleges -->
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold text-dark mb-8">Trusted by India's Top Colleges</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 items-center">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center">
                         <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
                             <div class="text-primary font-semibold text-sm">VNR Vignana Jyothi</div>
+                        </div>
+                        <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
+                            <div class="text-primary font-semibold text-sm">CBIT</div>
+                        </div>
+                        <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
+                            <div class="text-primary font-semibold text-sm">MGIT</div>
                         </div>
                         <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
                             <div class="text-primary font-semibold text-sm">Vasavi</div>
@@ -351,7 +479,7 @@ app.get('/', (c) => {
                             <div class="text-primary font-semibold text-sm">Narayanamma</div>
                         </div>
                         <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                            <div class="text-primary font-semibold text-sm">Srinidhi</div>
+                            <div class="text-primary font-semibold text-sm">Sreenidhi</div>
                         </div>
                         <div class="text-center p-4 hover:bg-gray-50 rounded-lg transition-colors">
                             <div class="text-primary font-semibold text-sm">Vignan</div>
@@ -368,27 +496,58 @@ app.get('/', (c) => {
                 <!-- Company Logos -->
                 <div class="text-center mb-12">
                     <h3 class="text-2xl font-bold text-dark mb-8">Our Students Work At</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center">
-                        <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                            <div class="text-blue-600 font-bold text-lg">TCS</div>
+                    
+                    <!-- Mass Recruiters -->
+                    <div class="mb-8">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-4">Mass Recruiters</h4>
+                        <div class="flex flex-wrap justify-center gap-3 text-sm">
+                            <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-full font-medium">TCS</span>
+                            <span class="bg-green-50 text-green-700 px-4 py-2 rounded-full font-medium">Deloitte</span>
+                            <span class="bg-blue-50 text-blue-600 px-4 py-2 rounded-full font-medium">Infosys</span>
+                            <span class="bg-purple-50 text-purple-700 px-4 py-2 rounded-full font-medium">Accenture</span>
+                            <span class="bg-blue-50 text-blue-800 px-4 py-2 rounded-full font-medium">Cognizant</span>
+                            <span class="bg-orange-50 text-orange-600 px-4 py-2 rounded-full font-medium">Amazon</span>
+                            <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-full font-medium">Wipro</span>
+                            <span class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full font-medium">CTS</span>
+                            <span class="bg-blue-50 text-blue-600 px-4 py-2 rounded-full font-medium">Capgemini</span>
+                            <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full font-medium">HCL Technologies</span>
+                            <span class="bg-purple-50 text-purple-600 px-4 py-2 rounded-full font-medium">Tech Mahindra</span>
+                            <span class="bg-teal-50 text-teal-700 px-4 py-2 rounded-full font-medium">LTIMindtree</span>
+                            <span class="bg-gray-50 text-gray-700 px-4 py-2 rounded-full font-medium">DXC Technology</span>
+                            <span class="bg-blue-50 text-blue-900 px-4 py-2 rounded-full font-medium">IBM</span>
+                            <span class="bg-indigo-50 text-indigo-600 px-4 py-2 rounded-full font-medium">NTT Data</span>
+                            <span class="bg-purple-50 text-purple-700 px-4 py-2 rounded-full font-medium">Mphasis</span>
+                            <span class="bg-teal-50 text-teal-600 px-4 py-2 rounded-full font-medium">Mindtree</span>
+                            <span class="bg-orange-50 text-orange-700 px-4 py-2 rounded-full font-medium">Birlasoft</span>
+                            <span class="bg-cyan-50 text-cyan-600 px-4 py-2 rounded-full font-medium">Hexaware Technologies</span>
+                            <span class="bg-green-50 text-green-600 px-4 py-2 rounded-full font-medium">Persistent Systems</span>
                         </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                            <div class="text-green-600 font-bold text-lg">Deloitte</div>
-                        </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                            <div class="text-blue-500 font-bold text-lg">Infosys</div>
-                        </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                            <div class="text-purple-600 font-bold text-lg">Accenture</div>
-                        </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                            <div class="text-blue-700 font-bold text-lg">Cognizant</div>
-                        </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                            <div class="text-orange-500 font-bold text-lg">Amazon</div>
-                        </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                            <div class="text-blue-600 font-bold text-lg">Wipro</div>
+                    </div>
+                    
+                    <!-- Product/Dream Companies -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-700 mb-4">Product / Dream Companies</h4>
+                        <div class="flex flex-wrap justify-center gap-3 text-sm">
+                            <span class="bg-gradient-to-r from-red-500 to-yellow-500 text-white px-4 py-2 rounded-full font-medium shadow">Google</span>
+                            <span class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full font-medium shadow">Microsoft</span>
+                            <span class="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-4 py-2 rounded-full font-medium shadow">Amazon</span>
+                            <span class="bg-gradient-to-r from-blue-600 to-blue-400 text-white px-4 py-2 rounded-full font-medium shadow">Flipkart</span>
+                            <span class="bg-gradient-to-r from-red-600 to-pink-600 text-white px-4 py-2 rounded-full font-medium shadow">Adobe</span>
+                            <span class="bg-gradient-to-r from-blue-700 to-cyan-500 text-white px-4 py-2 rounded-full font-medium shadow">Intel</span>
+                            <span class="bg-gradient-to-r from-blue-600 to-blue-400 text-white px-4 py-2 rounded-full font-medium shadow">Samsung R&D</span>
+                            <span class="bg-gradient-to-r from-blue-500 to-teal-400 text-white px-4 py-2 rounded-full font-medium shadow">Cisco</span>
+                            <span class="bg-gradient-to-r from-red-600 to-red-400 text-white px-4 py-2 rounded-full font-medium shadow">Oracle</span>
+                            <span class="bg-gradient-to-r from-blue-600 to-cyan-400 text-white px-4 py-2 rounded-full font-medium shadow">Paytm</span>
+                            <span class="bg-gradient-to-r from-purple-600 to-indigo-500 text-white px-4 py-2 rounded-full font-medium shadow">PhonePe</span>
+                            <span class="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full font-medium shadow">Zoho</span>
+                            <span class="bg-gradient-to-r from-green-500 to-teal-500 text-white px-4 py-2 rounded-full font-medium shadow">Freshworks</span>
+                            <span class="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-4 py-2 rounded-full font-medium shadow">IBM Research</span>
+                            <span class="bg-gradient-to-r from-green-600 to-green-400 text-white px-4 py-2 rounded-full font-medium shadow">Nvidia</span>
+                            <span class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-2 rounded-full font-medium shadow">Qualcomm</span>
+                            <span class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 rounded-full font-medium shadow">Dell Technologies</span>
+                            <span class="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-4 py-2 rounded-full font-medium shadow">Siemens</span>
+                            <span class="bg-gradient-to-r from-blue-600 to-blue-400 text-white px-4 py-2 rounded-full font-medium shadow">Philips</span>
+                            <span class="bg-gradient-to-r from-blue-700 to-blue-500 text-white px-4 py-2 rounded-full font-medium shadow">SAP Labs</span>
                         </div>
                     </div>
                 </div>
@@ -399,21 +558,17 @@ app.get('/', (c) => {
                         <h3 class="text-3xl font-bold mb-2">Key Placement Statistics</h3>
                         <p class="text-blue-100">Proven track record of excellence</p>
                     </div>
-                    <div class="grid md:grid-cols-4 gap-8">
+                    <div class="grid md:grid-cols-3 gap-8">
                         <div class="text-center">
-                            <div class="text-4xl font-bold mb-2">2000+</div>
+                            <div class="text-4xl font-bold mb-2">120,000+</div>
                             <div class="text-blue-100">Students Overall Placed</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-4xl font-bold mb-2">8 LPA</div>
+                            <div class="text-4xl font-bold mb-2">6 LPA</div>
                             <div class="text-blue-100">Average CTC</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-4xl font-bold mb-2">90%</div>
-                            <div class="text-blue-100">Interview-to-Offer Rate</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold mb-2">2167+</div>
+                            <div class="text-4xl font-bold mb-2">2,167+</div>
                             <div class="text-blue-100">Students Trained at VNR<br><span class="text-sm">(90-96% placement rate)</span></div>
                         </div>
                     </div>
@@ -487,18 +642,21 @@ app.get('/', (c) => {
                     <p class="text-xl text-gray-600">Industry-relevant skills that employers demand</p>
                 </div>
                 
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <div class="space-y-8">
+                <!-- Core Aptitude & Reasoning -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-dark mb-6 text-center">1. Core Aptitude & Reasoning</h3>
+                    <div class="grid lg:grid-cols-2 gap-8">
                         <!-- Quantitative Aptitude -->
                         <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mr-4">
                                     <i class="fas fa-calculator"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold text-dark">Quantitative Aptitude</h3>
+                                <h3 class="text-xl font-bold text-dark">Quantitative Aptitude</h3>
                             </div>
                             <div class="grid grid-cols-2 gap-2 text-sm text-gray-700">
                                 <div class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Arithmetic</div>
+                                <div class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Percentages</div>
                                 <div class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Profit & Loss</div>
                                 <div class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Time/Speed/Work</div>
                                 <div class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Probability</div>
@@ -507,6 +665,8 @@ app.get('/', (c) => {
                                 <div class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Ratios</div>
                                 <div class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Averages</div>
                                 <div class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Mixtures</div>
+                                <div class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Simple Interest</div>
+                                <div class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Compound Interest</div>
                             </div>
                         </div>
                         
@@ -516,62 +676,154 @@ app.get('/', (c) => {
                                 <div class="w-12 h-12 bg-purple-600 text-white rounded-lg flex items-center justify-center mr-4">
                                     <i class="fas fa-brain"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold text-dark">Logical Reasoning</h3>
+                                <h3 class="text-xl font-bold text-dark">Logical Reasoning</h3>
                             </div>
                             <div class="grid grid-cols-2 gap-2 text-sm text-gray-700">
                                 <div class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Puzzles</div>
-                                <div class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Seating Arrangements</div>
+                                <div class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Seating</div>
                                 <div class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Blood Relations</div>
                                 <div class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Coding-Decoding</div>
                                 <div class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Syllogisms</div>
                                 <div class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Series</div>
                                 <div class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Logical Deductions</div>
-                                <div class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Statements & Arguments</div>
+                                <div class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Statements</div>
+                                <div class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Assumptions</div>
+                                <div class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Clocks & Calendars</div>
+                                <div class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Direction Sense</div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="space-y-8">
+                    <div class="grid lg:grid-cols-2 gap-8 mt-8">
                         <!-- Data Interpretation -->
                         <div class="bg-gradient-to-r from-green-50 to-teal-50 p-8 rounded-xl">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-green-600 text-white rounded-lg flex items-center justify-center mr-4">
                                     <i class="fas fa-chart-bar"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold text-dark">Data Interpretation</h3>
+                                <h3 class="text-xl font-bold text-dark">Data Interpretation</h3>
                             </div>
                             <div class="space-y-2 text-sm text-gray-700">
                                 <div class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Graphs (Bar, Line, Pie)</div>
                                 <div class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Tables</div>
                                 <div class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Data Sufficiency</div>
-                                <div class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Advanced Analytics</div>
                             </div>
                         </div>
                         
-                        <!-- Soft Skills -->
+                        <!-- Verbal Ability -->
                         <div class="bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-orange-600 text-white rounded-lg flex items-center justify-center mr-4">
                                     <i class="fas fa-comments"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold text-dark">Soft Skills</h3>
+                                <h3 class="text-xl font-bold text-dark">Verbal Ability</h3>
                             </div>
                             <div class="space-y-2 text-sm text-gray-700">
-                                <div class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i>Communication Skills</div>
-                                <div class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i>Confidence Building</div>
-                                <div class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i>Interview Etiquette</div>
-                                <div class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i>Professional Presentation</div>
+                                <div class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i>Reading Comprehension</div>
+                                <div class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i>Error Correction</div>
+                                <div class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i>Sentence Completion</div>
+                                <div class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i>Synonyms & Antonyms</div>
+                                <div class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i>Para Jumbles</div>
                             </div>
                         </div>
-                        
-                        <div class="bg-gray-900 text-white p-8 rounded-xl">
-                            <h3 class="text-xl font-bold mb-4">Ready to Master These Skills?</h3>
-                            <p class="text-gray-300 mb-6">Join thousands of successful students who transformed their careers with our proven curriculum.</p>
-                            <button onclick="openModal()" class="bg-accent hover:bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                                Get Started Now
-                            </button>
+                    </div>
+                </div>
+
+                <!-- DSA Section -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-dark mb-6 text-center">2. Data Structures & Algorithms (DSA)</h3>
+                    <div class="bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 p-8 rounded-xl">
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div>
+                                <h4 class="font-bold text-primary mb-3">Core Topics</h4>
+                                <ul class="space-y-1 text-sm text-gray-700">
+                                    <li>• Introduction & Problem Solving</li>
+                                    <li>• Arrays & Searching</li>
+                                    <li>• Sorting Algorithms</li>
+                                    <li>• Strings & Pattern Matching</li>
+                                    <li>• Linked Lists</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-purple-600 mb-3">Advanced Topics</h4>
+                                <ul class="space-y-1 text-sm text-gray-700">
+                                    <li>• Stacks & Queues</li>
+                                    <li>• Recursion & Backtracking</li>
+                                    <li>• Trees & BST</li>
+                                    <li>• Heaps & Priority Queues</li>
+                                    <li>• Hashing</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-pink-600 mb-3">Expert Level</h4>
+                                <ul class="space-y-1 text-sm text-gray-700">
+                                    <li>• Graphs (BFS, DFS)</li>
+                                    <li>• Dynamic Programming</li>
+                                    <li>• Greedy Algorithms</li>
+                                    <li>• Bit Manipulation</li>
+                                    <li>• Practice on Platforms</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Life Skills Section -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-dark mb-6 text-center">3. Life Skills (Exclusive)</h3>
+                    <div class="bg-gradient-to-r from-yellow-50 via-amber-50 to-orange-50 p-8 rounded-xl">
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-700">
+                            <div class="flex items-start">
+                                <i class="fas fa-lightbulb text-yellow-600 mr-2 mt-1"></i>
+                                <div><strong>Thinking Frameworks:</strong> Charlie Munger, Naval Ravikant, Nassim Taleb</div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-brain text-yellow-600 mr-2 mt-1"></i>
+                                <div><strong>Decision Making:</strong> Think like Elon Musk</div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-balance-scale text-yellow-600 mr-2 mt-1"></i>
+                                <div><strong>Judgement:</strong> The true determinant of success</div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-rocket text-yellow-600 mr-2 mt-1"></i>
+                                <div><strong>Entrepreneurship:</strong> Mindset & execution</div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-bolt text-yellow-600 mr-2 mt-1"></i>
+                                <div><strong>High Agency:</strong> #1 skill of 21st century</div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-yellow-600 mr-2 mt-1"></i>
+                                <div><strong>Cold Email:</strong> Reach anyone effectively</div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone text-yellow-600 mr-2 mt-1"></i>
+                                <div><strong>Cold Call:</strong> Build confidence to connect</div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-book-open text-yellow-600 mr-2 mt-1"></i>
+                                <div><strong>Storytelling:</strong> Art of powerful communication</div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-chess text-yellow-600 mr-2 mt-1"></i>
+                                <div><strong>Leverage:</strong> Achieve more with less</div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-file-alt text-yellow-600 mr-2 mt-1"></i>
+                                <div><strong>Resume Creation:</strong> Psychology to stand out</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="bg-gray-900 text-white p-8 rounded-xl text-center">
+                    <h3 class="text-2xl font-bold mb-4">Ready to Master These Skills?</h3>
+                    <p class="text-gray-300 mb-6">Join 120,000+ successful students who transformed their careers with our proven curriculum.</p>
+                    <button onclick="openModal()" class="bg-accent hover:bg-yellow-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+                        Get Started Now
+                    </button>
                 </div>
             </div>
         </section>
@@ -585,30 +837,30 @@ app.get('/', (c) => {
                 </div>
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Harish Kumar -->
+                    <!-- Harish -->
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                         <div class="p-8 text-center">
                             <div class="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
                                 <i class="fas fa-user-tie text-3xl text-white"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-dark mb-2">Harish Kumar</h3>
+                            <h3 class="text-xl font-bold text-dark mb-2">Harish</h3>
                             <div class="text-primary font-semibold mb-4">Founder & CEO</div>
                             <div class="text-sm text-gray-600 space-y-2">
                                 <div class="flex items-center justify-center">
-                                    <i class="fas fa-graduation-cap text-primary mr-2"></i>
-                                    VIT Vellore Alumnus
+                                    <i class="fas fa-briefcase text-primary mr-2"></i>
+                                    11+ Years Experience
                                 </div>
                                 <div class="flex items-center justify-center">
-                                    <i class="fas fa-briefcase text-primary mr-2"></i>
-                                    10+ Years Experience
+                                    <i class="fas fa-building text-primary mr-2"></i>
+                                    2 Startups Founded
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <i class="fas fa-star text-primary mr-2"></i>
-                                    Entrepreneur & Consultant
+                                    Business Consultant
                                 </div>
                             </div>
                             <p class="text-gray-600 mt-4 text-sm">
-                                Soft skills & Life skills trainer specializing in interview preparation and career guidance.
+                                Founder & CEO of Elite Campus, Business Consultant, Mentor to High-Net-Worth Individuals, and Life Skills Trainer
                             </p>
                         </div>
                     </div>
@@ -620,51 +872,135 @@ app.get('/', (c) => {
                                 <i class="fas fa-user-graduate text-3xl text-white"></i>
                             </div>
                             <h3 class="text-xl font-bold text-dark mb-2">Lakshmi</h3>
-                            <div class="text-purple-600 font-semibold mb-4">Quant & Reasoning Expert</div>
+                            <div class="text-purple-600 font-semibold mb-4">IIM Alumna</div>
                             <div class="text-sm text-gray-600 space-y-2">
                                 <div class="flex items-center justify-center">
                                     <i class="fas fa-graduation-cap text-purple-600 mr-2"></i>
-                                    IIM Rohtak (2019-2021)
+                                    IIM Alumna
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <i class="fas fa-trophy text-purple-600 mr-2"></i>
-                                    99.6 in QA Score
+                                    99.6 Percentile in QA
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <i class="fas fa-medal text-purple-600 mr-2"></i>
-                                    98.4 in LR Score
+                                    98.4 Percentile in LR
                                 </div>
                             </div>
                             <p class="text-gray-600 mt-4 text-sm">
-                                Quantitative Aptitude and Logical Reasoning specialist with proven track record in competitive exams.
+                                Quantitative & Logical Reasoning expert with exceptional scores in competitive exams
                             </p>
                         </div>
                     </div>
                     
-                    <!-- Other Trainers -->
+                    <!-- Dr. Sarika Chand -->
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                         <div class="p-8 text-center">
                             <div class="w-24 h-24 bg-gradient-to-br from-green-600 to-teal-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                                <i class="fas fa-users text-3xl text-white"></i>
+                                <i class="fas fa-user-graduate text-3xl text-white"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-dark mb-2">Expert Panel</h3>
-                            <div class="text-green-600 font-semibold mb-4">Industry Specialists</div>
+                            <h3 class="text-xl font-bold text-dark mb-2">Dr. Sarika Chand</h3>
+                            <div class="text-green-600 font-semibold mb-4">English Expert</div>
                             <div class="text-sm text-gray-600 space-y-2">
                                 <div class="flex items-center justify-center">
-                                    <i class="fas fa-university text-green-600 mr-2"></i>
-                                    IIT/IIM Alumni
+                                    <i class="fas fa-graduation-cap text-green-600 mr-2"></i>
+                                    PhD in English
                                 </div>
                                 <div class="flex items-center justify-center">
-                                    <i class="fas fa-building text-green-600 mr-2"></i>
-                                    VIT, SRM, Kumara Guru
+                                    <i class="fas fa-certificate text-green-600 mr-2"></i>
+                                    UGC NET & CTET Qualified
                                 </div>
                                 <div class="flex items-center justify-center">
-                                    <i class="fas fa-laptop-code text-green-600 mr-2"></i>
-                                    Tier-1 Product Companies
+                                    <i class="fas fa-briefcase text-green-600 mr-2"></i>
+                                    10+ Years Experience
                                 </div>
                             </div>
                             <p class="text-gray-600 mt-4 text-sm">
-                                Our diverse panel of experts from top institutions and leading tech companies brings real-world experience.
+                                Masters, Bachelors, PhD Graduate with a decade of institutional experience
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Akanksha -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="p-8 text-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                                <i class="fas fa-laptop-code text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-2">Akanksha</h3>
+                            <div class="text-blue-600 font-semibold mb-4">Technical Trainer</div>
+                            <div class="text-sm text-gray-600 space-y-2">
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-graduation-cap text-blue-600 mr-2"></i>
+                                    MS and PhD Graduate
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-briefcase text-blue-600 mr-2"></i>
+                                    12+ Years Experience
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-building text-blue-600 mr-2"></i>
+                                    Corporates & Education
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mt-4 text-sm">
+                                Technical Trainer with extensive experience in corporates and education sector
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Kiranmayi -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="p-8 text-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-orange-600 to-red-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                                <i class="fas fa-chalkboard-teacher text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-2">Kiranmayi</h3>
+                            <div class="text-orange-600 font-semibold mb-4">Technical Trainer</div>
+                            <div class="text-sm text-gray-600 space-y-2">
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-graduation-cap text-orange-600 mr-2"></i>
+                                    Multiple Degrees
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-university text-orange-600 mr-2"></i>
+                                    Andhra & Nagarjuna Univ
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-briefcase text-orange-600 mr-2"></i>
+                                    14+ Years Experience
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mt-4 text-sm">
+                                Multiple degree holder with 14+ years of technical training experience
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Other Elite Trainers -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="p-8 text-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                                <i class="fas fa-users text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-2">Other Elite Trainers</h3>
+                            <div class="text-indigo-600 font-semibold mb-4">Expert Panel</div>
+                            <div class="text-sm text-gray-600 space-y-2">
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-university text-indigo-600 mr-2"></i>
+                                    IIT/IIM Alumni
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-building text-indigo-600 mr-2"></i>
+                                    VIT, SRM, Kumara Guru
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-laptop-code text-indigo-600 mr-2"></i>
+                                    Tier 1 Product Companies
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mt-4 text-sm">
+                                From Prestigious Institutions and Tier 1 Product Based Companies
                             </p>
                         </div>
                     </div>
@@ -675,16 +1011,16 @@ app.get('/', (c) => {
                         <h3 class="text-2xl font-bold text-dark mb-4">Why Our Trainers Make the Difference</h3>
                         <div class="grid md:grid-cols-3 gap-6 text-center">
                             <div>
-                                <div class="text-2xl font-bold text-primary mb-2">10+</div>
+                                <div class="text-2xl font-bold text-primary mb-2">11+</div>
                                 <div class="text-sm text-gray-600">Years Experience</div>
                             </div>
                             <div>
-                                <div class="text-2xl font-bold text-primary mb-2">2000+</div>
+                                <div class="text-2xl font-bold text-primary mb-2">120,000+</div>
                                 <div class="text-sm text-gray-600">Students Trained</div>
                             </div>
                             <div>
-                                <div class="text-2xl font-bold text-primary mb-2">90%+</div>
-                                <div class="text-sm text-gray-600">Success Rate</div>
+                                <div class="text-2xl font-bold text-primary mb-2">90-96%</div>
+                                <div class="text-sm text-gray-600">Placement Rate</div>
                             </div>
                         </div>
                     </div>
@@ -818,60 +1154,120 @@ app.get('/', (c) => {
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                         <button onclick="toggleFAQ(1)" class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition-colors">
                             <div class="flex items-center justify-between">
-                                <h3 class="text-lg font-semibold text-dark">I don't know coding. Is this for me?</h3>
+                                <h3 class="text-lg font-semibold text-dark">1. What exactly is the Elite Campus Training Program?</h3>
                                 <i class="fas fa-chevron-down text-gray-400 transition-transform" id="icon-1"></i>
                             </div>
                         </button>
                         <div class="px-6 pb-6 hidden" id="answer-1">
-                            <p class="text-gray-600">Yes! We cover both coding and non-coding roles. Our curriculum is designed to prepare you for various opportunities in the tech industry, regardless of your coding background. We focus on aptitude, reasoning, and soft skills that are essential for all roles.</p>
+                            <p class="text-gray-600">Our program is a comprehensive campus recruitment training designed to help students master quantitative aptitude, logical reasoning, verbal ability, time management, and interview skills.</p>
                         </div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                         <button onclick="toggleFAQ(2)" class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition-colors">
                             <div class="flex items-center justify-between">
-                                <h3 class="text-lg font-semibold text-dark">How is this different from my college training?</h3>
+                                <h3 class="text-lg font-semibold text-dark">2. Who conducts the training sessions?</h3>
                                 <i class="fas fa-chevron-down text-gray-400 transition-transform" id="icon-2"></i>
                             </div>
                         </button>
                         <div class="px-6 pb-6 hidden" id="answer-2">
-                            <p class="text-gray-600">You'll get personalized mentorship plus mock interviews with IIT/IIM experts. Our training is more intensive, individualized, and industry-focused compared to general college programs. We provide one-on-one guidance and company-specific preparation.</p>
+                            <p class="text-gray-600">Sessions are led by elite trainers from top institutions with years of experience helping thousands of students secure placements in top MNCs.</p>
                         </div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                         <button onclick="toggleFAQ(3)" class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition-colors">
                             <div class="flex items-center justify-between">
-                                <h3 class="text-lg font-semibold text-dark">What if I don't get placed?</h3>
+                                <h3 class="text-lg font-semibold text-dark">3. How is this program different from other aptitude coaching or online courses?</h3>
                                 <i class="fas fa-chevron-down text-gray-400 transition-transform" id="icon-3"></i>
                             </div>
                         </button>
                         <div class="px-6 pb-6 hidden" id="answer-3">
-                            <p class="text-gray-600">We provide continuous support with multiple interview drills until you succeed. Our commitment doesn't end after the training - we work with you until you land your dream job. With our 90% placement rate, we're confident in our ability to help you succeed.</p>
+                            <p class="text-gray-600">We combine expert-led sessions, real-world examples, personalized feedback, and mock tests modeled after actual campus recruitment exams—something most other programs lack.</p>
                         </div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                         <button onclick="toggleFAQ(4)" class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition-colors">
                             <div class="flex items-center justify-between">
-                                <h3 class="text-lg font-semibold text-dark">How long does the training program take?</h3>
+                                <h3 class="text-lg font-semibold text-dark">4. Will the training cover all stages of the recruitment process?</h3>
                                 <i class="fas fa-chevron-down text-gray-400 transition-transform" id="icon-4"></i>
                             </div>
                         </button>
                         <div class="px-6 pb-6 hidden" id="answer-4">
-                            <p class="text-gray-600">Our intensive training program is designed to get you placement-ready in 90 days. This includes resume building, skill development, mock interviews, and placement preparation. The timeline may vary based on your starting level and dedication.</p>
+                            <p class="text-gray-600">Yes! We cover aptitude tests, group discussions, personal interviews, and even company-specific preparation techniques.</p>
                         </div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                         <button onclick="toggleFAQ(5)" class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition-colors">
                             <div class="flex items-center justify-between">
-                                <h3 class="text-lg font-semibold text-dark">What companies do you help students get placed in?</h3>
+                                <h3 class="text-lg font-semibold text-dark">5. I struggle with math and logical reasoning. Can this program still help me?</h3>
                                 <i class="fas fa-chevron-down text-gray-400 transition-transform" id="icon-5"></i>
                             </div>
                         </button>
                         <div class="px-6 pb-6 hidden" id="answer-5">
-                            <p class="text-gray-600">Our students have been successfully placed in top companies including TCS, Deloitte, Infosys, Accenture, Cognizant, Amazon, and Wipro. We prepare you for both service-based and product-based companies across various roles and domains.</p>
+                            <p class="text-gray-600">Absolutely. We break down complex topics into simple, interactive lessons and provide daily practice to build your confidence from the ground up.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <button onclick="toggleFAQ(6)" class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-dark">6. How do you help students manage time during exams?</h3>
+                                <i class="fas fa-chevron-down text-gray-400 transition-transform" id="icon-6"></i>
+                            </div>
+                        </button>
+                        <div class="px-6 pb-6 hidden" id="answer-6">
+                            <p class="text-gray-600">We teach proven time-management frameworks and run regular exam simulations so you can build accuracy under real test pressure.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <button onclick="toggleFAQ(7)" class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-dark">7. Are there mock tests included in the program?</h3>
+                                <i class="fas fa-chevron-down text-gray-400 transition-transform" id="icon-7"></i>
+                            </div>
+                        </button>
+                        <div class="px-6 pb-6 hidden" id="answer-7">
+                            <p class="text-gray-600">Yes. We conduct regular mock tests and review sessions aligned with the latest campus recruitment patterns to track and improve your performance.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <button onclick="toggleFAQ(8)" class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-dark">8. Is the training tailored for specific companies or just general aptitude?</h3>
+                                <i class="fas fa-chevron-down text-gray-400 transition-transform" id="icon-8"></i>
+                            </div>
+                        </button>
+                        <div class="px-6 pb-6 hidden" id="answer-8">
+                            <p class="text-gray-600">Both. We teach the fundamentals thoroughly and also provide company-specific practice papers to help you prepare for your target employers.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <button onclick="toggleFAQ(9)" class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-dark">9. Do you offer one-on-one guidance or only group sessions?</h3>
+                                <i class="fas fa-chevron-down text-gray-400 transition-transform" id="icon-9"></i>
+                            </div>
+                        </button>
+                        <div class="px-6 pb-6 hidden" id="answer-9">
+                            <p class="text-gray-600">Our program blends group learning with personalized feedback so you get individual guidance on your weak areas.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <button onclick="toggleFAQ(10)" class="w-full text-left p-6 focus:outline-none hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-dark">10. How soon will I see improvement after joining the program?</h3>
+                                <i class="fas fa-chevron-down text-gray-400 transition-transform" id="icon-10"></i>
+                            </div>
+                        </button>
+                        <div class="px-6 pb-6 hidden" id="answer-10">
+                            <p class="text-gray-600">Most students notice a significant improvement in their problem-solving speed and accuracy within a few weeks, and continued practice further accelerates results.</p>
                         </div>
                     </div>
                 </div>
@@ -893,23 +1289,27 @@ app.get('/', (c) => {
                     </button>
                 </div>
                 
-                <p class="text-sm text-blue-200">
+                <p class="text-sm text-blue-200 mb-4">
+                    <i class="fas fa-users mr-2"></i>
+                    Join 1,20,000+ Community
+                </p>
+                <p class="text-xs text-blue-300">
                     <i class="fas fa-shield-alt mr-2"></i>
                     No spam. We'll only call once to schedule your session.
                 </p>
                 
                 <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-                        <div class="text-3xl font-bold mb-2">90%</div>
-                        <div class="text-blue-200">Success Rate</div>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-                        <div class="text-3xl font-bold mb-2">2000+</div>
+                        <div class="text-3xl font-bold mb-2">120,000+</div>
                         <div class="text-blue-200">Students Placed</div>
                     </div>
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-                        <div class="text-3xl font-bold mb-2">8 LPA</div>
+                        <div class="text-3xl font-bold mb-2">6 LPA</div>
                         <div class="text-blue-200">Average Package</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                        <div class="text-3xl font-bold mb-2">90-96%</div>
+                        <div class="text-blue-200">Placement Rate</div>
                     </div>
                 </div>
             </div>

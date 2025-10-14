@@ -76,9 +76,8 @@ function initializeCounterAnimations() {
 // Animate counters
 function animateCounters() {
     const counters = [
-        { element: document.querySelector('[data-counter="2000"]'), target: 2000, suffix: '+' },
-        { element: document.querySelector('[data-counter="8"]'), target: 8, suffix: ' LPA' },
-        { element: document.querySelector('[data-counter="90"]'), target: 90, suffix: '%' },
+        { element: document.querySelector('[data-counter="120000"]'), target: 120000, suffix: '+' },
+        { element: document.querySelector('[data-counter="6"]'), target: 6, suffix: ' LPA' },
         { element: document.querySelector('[data-counter="2167"]'), target: 2167, suffix: '+' }
     ];
     
@@ -93,7 +92,11 @@ function animateCounters() {
                 current = counter.target;
                 clearInterval(timer);
             }
-            counter.element.textContent = Math.floor(current) + counter.suffix;
+            if (counter.target >= 1000) {
+                counter.element.textContent = Math.floor(current).toLocaleString() + counter.suffix;
+            } else {
+                counter.element.textContent = Math.floor(current) + counter.suffix;
+            }
         }, 40);
     });
 }
