@@ -7,7 +7,7 @@
 
 ## URLs
 - **🌟 PRODUCTION SITE**: https://elite-campus-training.pages.dev/
-- **🌟 LATEST DEPLOYMENT**: https://29d97c10.elite-campus-training.pages.dev/
+- **🌟 LATEST DEPLOYMENT**: https://8030893f.elite-campus-training.pages.dev/
 - **Live Development Site**: https://3000-ixpaahf90med7t5ecgwx2-c07dda5e.sandbox.novita.ai/
 - **GitHub Repository**: https://github.com/mallikarjunm034/elitecompus
 - **Production**: ✅ **DEPLOYED TO CLOUDFLARE PAGES** (Rebranded to "Elite Campus")
@@ -179,7 +179,7 @@ pm2 restart elite-campus-training  # Restart service
 - **Platform**: ✅ **LIVE ON CLOUDFLARE PAGES**
 - **Status**: 🚀 **PRODUCTION DEPLOYED** (Updated with comprehensive client feedback)
 - **Main URL**: https://elite-campus-training.pages.dev/
-- **Latest Deployment**: https://859c433d.elite-campus-training.pages.dev/
+- **Latest Deployment**: https://8030893f.elite-campus-training.pages.dev/
 - **Performance**: Optimized for speed and SEO
 - **Mobile**: Fully responsive design
 - **SSL**: ✅ Secured with Cloudflare SSL
